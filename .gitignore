@@ -1,0 +1,10 @@
+node_modules/
+dist/
+__tapes__/
+__test_tapes__/
+__vitest_tapes__/
+*.log
+.DS_Store
+*.tgz
+.env
+.env.*

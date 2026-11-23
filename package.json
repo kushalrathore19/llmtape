@@ -1,0 +1,78 @@
+{
+  "name": "llm-tape",
+  "version": "0.1.0",
+  "description": "Zero-dependency record and replay library for LLM API calls with streaming support",
+  "author": "Kushal Rathore",
+  "license": "MIT",
+  "homepage": "https://github.com/kushalrathore/llmtape#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kushalrathore/llmtape.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kushalrathore/llmtape/issues"
+  },
+  "keywords": [
+    "llm",
+    "openai",
+    "anthropic",
+    "gemini",
+    "vcr",
+    "record-replay",
+    "mock",
+    "testing",
+    "streaming",
+    "vitest",
+    "jest",
+    "tape"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "llmtape": "./bin/llmtape.js",
+    "llm-tape": "./bin/llmtape.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./vitest": {
+      "types": "./dist/vitest.d.ts",
+      "import": "./dist/vitest.js",
+      "require": "./dist/vitest.cjs"
+    },
+    "./jest": {
+      "types": "./dist/jest.d.ts",
+      "import": "./dist/jest.js",
+      "require": "./dist/jest.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
